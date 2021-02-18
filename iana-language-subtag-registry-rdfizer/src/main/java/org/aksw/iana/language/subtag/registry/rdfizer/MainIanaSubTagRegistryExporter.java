@@ -1,34 +1,23 @@
 package org.aksw.iana.language.subtag.registry.rdfizer;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.ListIterator;
 import java.util.Map;
-import java.util.Map.Entry;
 import java.util.Set;
 import java.util.TreeSet;
 
 import org.aksw.iana.subtag.registry.domain.IanaSubTag;
 import org.aksw.jena_sparql_api.mapper.proxy.JenaPluginUtils;
-import org.aksw.jena_sparql_api.rx.op.FlowableOperatorSequentialGroupBy;
 import org.apache.jena.rdf.model.Model;
-import org.apache.jena.rdf.model.ModelFactory;
 import org.apache.jena.rdf.model.Property;
-import org.apache.jena.rdf.model.Resource;
 import org.apache.jena.rdf.model.ResourceFactory;
-import org.apache.jena.riot.system.stream.StreamManager;
+import org.apache.jena.riot.RDFDataMgr;
+import org.apache.jena.riot.RDFFormat;
 import org.apache.jena.riot.web.LangTag;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
-
-import io.reactivex.rxjava3.core.Flowable;
 
 public class MainIanaSubTagRegistryExporter {
 
@@ -46,7 +35,7 @@ public class MainIanaSubTagRegistryExporter {
 		
 		validate("de-jp", index);
 		
-		// RDFDataMgr.write(System.out, model, RDFFormat.TURTLE_PRETTY);
+		RDFDataMgr.write(System.out, model, RDFFormat.TURTLE_PRETTY);
 	}
 
 	public static boolean validate(String langTag, Multimap<Integer, String> index) {
