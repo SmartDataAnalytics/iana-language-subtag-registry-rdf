@@ -3,6 +3,8 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 
+# Experimental dcat scheme aimed at future auto-generation of it from a pom.xml file using a maven plugin
+
 <urn:mvn:org.aksw.iana-language-subtag-registry:iana-language-subtag-registry-resource-rdf-raw:2021-02-16#dataset>
   a dcat:Dataset ;
   rdfs:label "IANA Language Subtag Registry raw RDF" ;
