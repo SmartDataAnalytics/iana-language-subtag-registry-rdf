@@ -1,4 +1,4 @@
-# iana-subtag-registry-jena
+# iana-language-subtag-registry-rdfizer
 
 The [IANA language subtag registry](http://www.iana.org/assignments/language-subtag-registry/language-subtag-registry) is a resource that
 lists valid values for use in the components of BCP47 language tags. The format is a set of records with key-value pairs.
