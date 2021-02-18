@@ -14,11 +14,6 @@
 	<description>IANA subtag registry in raw RDF</description>
 	<url>https://github.com/SmartDataAnalytics/</url>
 
-	<issueManagement>
-		<url>https://github.com/SmartDataAnalytics/RdfProcessingToolkit/issues</url>
-		<system>GitHub</system>
-	</issueManagement>
-
 	<licenses>
 		<license>
 			<name>Apache License 2.0</name>
@@ -30,11 +25,16 @@
 	<!-- scm section needs to be duplicated on child module for github-release-plugin; 
 		see https://github.com/jutzig/github-release-plugin/issues/14 -->
 	<scm>
-		<url>https://github.com/SmartDataAnalytics/RdfProcessingToolkit</url>
-		<connection>scm:git:git@github.com:SmartDataAnalytics/RdfProcessingToolkit.git</connection>
-		<developerConnection>scm:git:git@github.com:SmartDataAnalytics/RdfProcessingToolkit.git</developerConnection>
+		<url>https://github.com/SmartDataAnalytics/SmartDataAnalytics/iana-language-subtag-registry-rdf</url>
+		<connection>scm:git:git@github.com:SmartDataAnalytics/iana-language-subtag-registry-rdf.git</connection>
+		<developerConnection>scm:git:git@github.com:SmartDataAnalytics/iana-language-subtag-registry-rdf.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
+
+	<issueManagement>
+		<url>https://github.com/SmartDataAnalytics/iana-language-subtag-registry-rdf/issues</url>
+		<system>GitHub</system>
+	</issueManagement>
 
 	<developers>
 		<developer>
@@ -72,42 +72,46 @@
 		</resources>
 
 		<plugins>
-			<plugin>
-				<groupId>com.amashchenko.maven.plugin</groupId>
-				<artifactId>gitflow-maven-plugin</artifactId>
-			</plugin>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-			</plugin>
 
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-javadoc-plugin</artifactId>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-surefire-plugin</artifactId>
-			</plugin>
-
+			<!-- <plugin> <groupId>de.jutzig</groupId> <artifactId>github-release-plugin</artifactId> 
+				</plugin> <plugin> <groupId>de.jutzig</groupId> <artifactId>github-release-plugin</artifactId> 
+				<plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-compiler-plugin</artifactId> 
+				</plugin> <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-source-plugin</artifactId> 
+				</plugin> <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-javadoc-plugin</artifactId> 
+				</plugin> <plugin> <groupId>org.apache.maven.plugins</groupId> <artifactId>maven-surefire-plugin</artifactId> 
+				</plugin> -->
 		</plugins>
 
 		<pluginManagement>
 			<plugins>
+				<plugin>
+					<groupId>de.jutzig</groupId>
+					<artifactId>github-release-plugin</artifactId>
+					<version>1.3.0</version>
+					<configuration>
+						<tag>${project.artifactId}-${project.version}</tag>
+						<!-- <description>LSQ Release</description> -->
+						<!-- <releaseName>${project.version}</releaseName> -->
+						<fileSets>
+							<fileSet>
+								<directory>${project.build.directory}</directory>
+								<includes>
+									<!-- <include>${project.artifactId}*-jar-with-dependencies.jar</include> -->
+									<!-- <include>*dependencies.jar</include> -->
+								</includes>
+							</fileSet>
+						</fileSets>
+					</configuration>
+				</plugin>
+
 				<plugin>
 					<groupId>com.amashchenko.maven.plugin</groupId>
 					<artifactId>gitflow-maven-plugin</artifactId>
 					<version>1.8.0</version>
 					<configuration>
 						<gitFlowConfig>
-							<versionTagPrefix>v</versionTagPrefix>
+							<versionTagPrefix>resource-rdf-raw-</versionTagPrefix>
 						</gitFlowConfig>
 					</configuration>
 				</plugin>
