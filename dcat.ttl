@@ -12,6 +12,6 @@
   
 <urn:mvn:org.aksw.iana-language-subtag-registry:iana-language-subtag-registry-rdf-raw:2021-02-16!ttl#distribution>
   a dcat:Distribution ;
-  dcat:downloadURL <iana-language-subtag-registry-resources/src/main/resources/iana-language-subtag-registry.2021-02-16.raw.ttl> ;
+  dcat:downloadURL <iana-language-subtag-registry-rdf-raw/src/main/resources/iana-language-subtag-registry.2021-02-16.raw.ttl> ;
   .
 
