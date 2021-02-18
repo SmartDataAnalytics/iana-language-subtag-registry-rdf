@@ -5,13 +5,13 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.aksw.iana-language-subtag-registry</groupId>
-	<artifactId>iana-language-subtag-registry-resources</artifactId>
-	<version>0.9.0-SNAPSHOT</version>
+	<artifactId>iana-language-subtag-registry-resource-rdf-raw</artifactId>
+	<version>2021-02-16</version>
 
 	<packaging>jar</packaging>
 
-	<name>IANA Subtag Registry Resource Resources</name>
-	<description>IANA subtag registry resources</description>
+	<name>IANA Subtag Registry Resource RDF Raw</name>
+	<description>IANA subtag registry in raw RDF</description>
 	<url>https://github.com/SmartDataAnalytics/</url>
 
 	<issueManagement>
@@ -46,10 +46,6 @@
 	</developers>
 
 	<properties>
-		<jena.version>3.17.0</jena.version>
-		<jena-sparql-api.subversion>1-SNAPSHOT</jena-sparql-api.subversion>
-		<jena-sparql-api.version>${jena.version}-${jena-sparql-api.subversion}</jena-sparql-api.version>
-
 		<timestamp>${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
 
