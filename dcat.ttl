@@ -3,15 +3,15 @@
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 
-<urn:mvn:org.aksw.iana-language-subtag-registry:iana-language-subtag-registry-rdf-raw:2021-02-16#dataset>
+<urn:mvn:org.aksw.iana-language-subtag-registry:iana-language-subtag-registry-resource-rdf-raw:2021-02-16#dataset>
   a dcat:Dataset ;
   rdfs:label "IANA Language Subtag Registry raw RDF" ;
-  dcat:distribution <urn:mvn:org.aksw.iana-language-subtag-registry:iana-language-subtag-registry-rdf-raw:2021-02-16!ttl#distribution> ;
+  dcat:distribution <urn:mvn:org.aksw.iana-language-subtag-registry:iana-language-subtag-registry-resource-rdf-raw:2021-02-16!ttl#distribution> ;
   dct:created "2021-02-16"^^xsd:date ;
   .
   
-<urn:mvn:org.aksw.iana-language-subtag-registry:iana-language-subtag-registry-rdf-raw:2021-02-16!ttl#distribution>
+<urn:mvn:org.aksw.iana-language-subtag-registry:iana-language-subtag-registry-resource-rdf-raw:2021-02-16!ttl#distribution>
   a dcat:Distribution ;
-  dcat:downloadURL <iana-language-subtag-registry-rdf-raw/src/main/resources/iana-language-subtag-registry.2021-02-16.raw.ttl> ;
+  dcat:downloadURL <iana-language-subtag-registry-resource-rdf-raw/src/main/resources/iana-language-subtag-registry.2021-02-16.raw.ttl> ;
   .
 
