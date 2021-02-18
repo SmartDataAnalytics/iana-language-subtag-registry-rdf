@@ -111,6 +111,7 @@
 					<version>1.15.1</version>
 					<configuration>
 						<gitFlowConfig>
+							<productionBranch>main</productionBranch>
 							<versionTagPrefix>resource-rdf-raw-</versionTagPrefix>
 						</gitFlowConfig>
 					</configuration>
