@@ -33,7 +33,7 @@ public class MainIanaSubTagRegistryExporter {
 		Multimap<Integer, String> index = langTagKnownValues(model);
 		
 		
-		validate("de-jp", index);
+		// validate("de-jp", index);
 		
 		RDFDataMgr.write(System.out, model, RDFFormat.TURTLE_PRETTY);
 	}
