@@ -25,7 +25,7 @@
 	<!-- scm section needs to be duplicated on child module for github-release-plugin; 
 		see https://github.com/jutzig/github-release-plugin/issues/14 -->
 	<scm>
-		<url>https://github.com/SmartDataAnalytics/SmartDataAnalytics/iana-language-subtag-registry-rdf</url>
+		<url>https://github.com/SmartDataAnalytics/iana-language-subtag-registry-rdf</url>
 		<connection>scm:git:git@github.com:SmartDataAnalytics/iana-language-subtag-registry-rdf.git</connection>
 		<developerConnection>scm:git:git@github.com:SmartDataAnalytics/iana-language-subtag-registry-rdf.git</developerConnection>
 		<tag>HEAD</tag>
