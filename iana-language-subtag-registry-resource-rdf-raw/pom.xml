@@ -6,7 +6,7 @@
 
 	<groupId>org.aksw.iana-language-subtag-registry</groupId>
 	<artifactId>iana-language-subtag-registry-resource-rdf-raw</artifactId>
-	<version>2021-02-16</version>
+	<version>2023-02-26</version>
 
 	<packaging>jar</packaging>
 
@@ -25,7 +25,7 @@
 	<!-- scm section needs to be duplicated on child module for github-release-plugin; 
 		see https://github.com/jutzig/github-release-plugin/issues/14 -->
 	<scm>
-		<url>https://github.com/SmartDataAnalytics/SmartDataAnalytics/iana-language-subtag-registry-rdf</url>
+		<url>https://github.com/SmartDataAnalytics/iana-language-subtag-registry-rdf</url>
 		<connection>scm:git:git@github.com:SmartDataAnalytics/iana-language-subtag-registry-rdf.git</connection>
 		<developerConnection>scm:git:git@github.com:SmartDataAnalytics/iana-language-subtag-registry-rdf.git</developerConnection>
 		<tag>HEAD</tag>
@@ -50,8 +50,7 @@
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
 
 		<!-- Project Settings -->
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.release>11</maven.compiler.release>
 		<java.version.javadoc>http://java.sun.com/javase/8/docs/api/</java.version.javadoc>
 		<file.encoding>UTF-8</file.encoding>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -120,10 +119,9 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.6.0</version>
+					<version>3.8.1</version>
 					<configuration>
-						<source>${maven.compiler.source}</source>
-						<target>${maven.compiler.target}</target>
+						<source>${maven.compiler.release}</source>
 						<encoding>${project.build.sourceEncoding}</encoding>
 					</configuration>
 				</plugin>
