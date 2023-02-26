@@ -6,7 +6,7 @@
 
 	<groupId>org.aksw.iana-language-subtag-registry</groupId>
 	<artifactId>iana-language-subtag-registry-resource-rdf-raw</artifactId>
-	<version>2021-03-16-SNAPSHOT</version>
+	<version>2023-02-26-SNAPSHOT</version>
 
 	<packaging>jar</packaging>
 
@@ -50,8 +50,7 @@
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
 
 		<!-- Project Settings -->
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.release>11</maven.compiler.release>
 		<java.version.javadoc>http://java.sun.com/javase/8/docs/api/</java.version.javadoc>
 		<file.encoding>UTF-8</file.encoding>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -120,10 +119,9 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.6.0</version>
+					<version>3.8.1</version>
 					<configuration>
-						<source>${maven.compiler.source}</source>
-						<target>${maven.compiler.target}</target>
+						<source>${maven.compiler.release}</source>
 						<encoding>${project.build.sourceEncoding}</encoding>
 					</configuration>
 				</plugin>

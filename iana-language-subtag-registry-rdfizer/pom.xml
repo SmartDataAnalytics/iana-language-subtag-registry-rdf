@@ -6,7 +6,7 @@
 
 	<groupId>org.aksw.iana-language-subtag-registry</groupId>
 	<artifactId>iana-language-subtag-registry-rdfizer</artifactId>
-	<version>0.9.0-SNAPSHOT</version>
+	<version>0.9.5-SNAPSHOT</version>
 
 	<packaging>jar</packaging>
 
@@ -30,9 +30,9 @@
 	<!-- scm section needs to be duplicated on child module for github-release-plugin; 
 		see https://github.com/jutzig/github-release-plugin/issues/14 -->
 	<scm>
-		<url>https://github.com/SmartDataAnalytics/RdfProcessingToolkit</url>
-		<connection>scm:git:git@github.com:SmartDataAnalytics/RdfProcessingToolkit.git</connection>
-		<developerConnection>scm:git:git@github.com:SmartDataAnalytics/RdfProcessingToolkit.git</developerConnection>
+		<url>https://github.com/SmartDataAnalytics/iana-language-subtag-registry-rdf</url>
+		<connection>scm:git:git@github.com:SmartDataAnalytics/iana-language-subtag-registry-rdf.git</connection>
+		<developerConnection>scm:git:git@github.com:SmartDataAnalytics/iana-language-subtag-registry-rdf.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 
@@ -46,16 +46,15 @@
 	</developers>
 
 	<properties>
-		<jena.version>3.17.0</jena.version>
-		<jena-sparql-api.subversion>1-SNAPSHOT</jena-sparql-api.subversion>
-		<jena-sparql-api.version>${jena.version}-${jena-sparql-api.subversion}</jena-sparql-api.version>
+		<jena.version>4.8.0</jena.version>
+		<jenax.subversion>1-SNAPSHOT</jenax.subversion>
+		<jenax.version>${jena.version}-${jenax.subversion}</jenax.version>
 
 		<timestamp>${maven.build.timestamp}</timestamp>
 		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
 
 		<!-- Project Settings -->
-		<maven.compiler.source>1.8</maven.compiler.source>
-		<maven.compiler.target>1.8</maven.compiler.target>
+		<maven.compiler.release>11</maven.compiler.release>
 		<java.version.javadoc>http://java.sun.com/javase/8/docs/api/</java.version.javadoc>
 		<file.encoding>UTF-8</file.encoding>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -66,31 +65,26 @@
 
 	<dependencies>
 		<dependency>
-			<groupId>org.aksw.jena-sparql-api</groupId>
-			<artifactId>jena-sparql-api-mapper-proxy</artifactId>
+			<groupId>org.aksw.jenax</groupId>
+			<artifactId>jenax-reprogen-core</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>org.aksw.jena-sparql-api</groupId>
-			<artifactId>jena-sparql-api-rx</artifactId>
+			<groupId>org.aksw.jenax</groupId>
+			<artifactId>jenax-arq-rx</artifactId>
 		</dependency>
 	</dependencies>
 
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
-				<groupId>org.aksw.jena-sparql-api</groupId>
-				<artifactId>jena-sparql-api-mapper-proxy</artifactId>
-				<version>${jena-sparql-api.version}</version>
-			</dependency>
-
-			<dependency>
-				<groupId>org.aksw.jena-sparql-api</groupId>
-				<artifactId>jena-sparql-api-rx</artifactId>
-				<version>${jena-sparql-api.version}</version>
+				<groupId>org.aksw.jenax</groupId>
+				<artifactId>jenax-bom</artifactId>
+				<version>${jenax.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
-
 
 	<build>
 		<resources>
@@ -147,10 +141,9 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.6.0</version>
+					<version>3.8.1</version>
 					<configuration>
-						<source>${maven.compiler.source}</source>
-						<target>${maven.compiler.target}</target>
+						<release>${maven.compiler.release}</release>
 						<encoding>${project.build.sourceEncoding}</encoding>
 					</configuration>
 				</plugin>
