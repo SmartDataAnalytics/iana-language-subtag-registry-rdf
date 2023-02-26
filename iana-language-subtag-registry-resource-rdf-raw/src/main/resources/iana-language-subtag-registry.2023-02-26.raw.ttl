@@ -22197,7 +22197,7 @@
         <urn:x-key:Added>        "2018-04-22" ;
         <urn:x-key:Comments>     "Classical written standard for Occitan developed in 1935 by Alibèrt" ;
         <urn:x-key:Description>  "Classical Occitan orthography" ;
-        <urn:x-key:Prefix>       "oc-lengadoc" , "oc-auvern" , "oc-lemosin" , "oc-provenc" , "oc-cisaup" , "oc" , "oc-gascon" , "oc-nicard" , "oc-creiss" , "oc-aranes" , "oc-vivaraup" ;
+        <urn:x-key:Prefix>       "oc-lengadoc" , "oc-auvern" , "oc-lemosin" , "oc-provenc" , "oc-cisaup" , "oc" , "oc-gascon" , "oc-nicard" , "oc-creiss" , "oc-vivaraup" , "oc-aranes" ;
         <urn:x-key:Subtag>       "grclass" ;
         <urn:x-key:Type>         "variant" .
 
@@ -24956,7 +24956,7 @@
         <urn:x-key:Added>        "2018-04-22" ;
         <urn:x-key:Comments>     "Written standard developed by Romanilha in 1853 and used by Mistral and the Félibres, including derived standards such as Escolo dóu Po, Escolo Gaston Febus, and others" ;
         <urn:x-key:Description>  "Mistralian or Mistralian-inspired Occitan orthography" ;
-        <urn:x-key:Prefix>       "oc-nicard" , "oc-lemosin" , "oc-auvern" , "oc-lengadoc" , "oc-gascon" , "oc-vivaraup" , "oc-creiss" , "oc-aranes" , "oc-cisaup" , "oc-provenc" , "oc" ;
+        <urn:x-key:Prefix>       "oc-nicard" , "oc-lemosin" , "oc-auvern" , "oc-lengadoc" , "oc-gascon" , "oc-vivaraup" , "oc-creiss" , "oc-aranes" , "oc-cisaup" , "oc" , "oc-provenc" ;
         <urn:x-key:Subtag>       "grmistr" ;
         <urn:x-key:Type>         "variant" .
 
@@ -56673,4 +56673,4 @@
         <urn:x-key:Preferred-Value>  "ase" ;
         <urn:x-key:Prefix>           "sgn" ;
         <urn:x-key:Subtag>           "ase" ;
-        <urn:x-key:Type>             "extlang
+        <urn:x-key:Type>             "extlang" .
